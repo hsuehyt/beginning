@@ -6,10 +6,12 @@ using TMPro;
 public class HelloWorld : MonoBehaviour
 {
     public string firstName;
+    private TextMeshProUGUI textMeshPro;
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Hello");   
+        textMeshPro = GetComponent<TextMeshProUGUI>();
+        textMeshPro.text = $"Hello {firstName}!";
     }
 
     // Update is called once per frame
